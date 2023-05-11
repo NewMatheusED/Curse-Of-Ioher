@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --efeitos: #2fac66;
+    --base: #312783;
+    --extra: #f2d9ff;
+    --roxo: #531d69;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.mainImg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url(../banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(60%);
+    z-index: -9999;
+}
+
+.container {
+    padding: 0 2%;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+
+}
+
+#shadow {
+    position: fixed;
+    box-shadow: 5px 15px 10px 0px rgba(0,0,0,0.75);
+    height: 94px;
+    width: 100vw;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background: var(--roxo);
+    width: 100vw;
+    padding: 40px;
+    transition: .5s ease-in-out;
+    clip-path: polygon(0px 0px, 0px 0px, 0px 100%, 0px 100%);
+    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+}
+
+.logo img, .logo i {
+    position: fixed;
+    padding: 10px;
+    max-height: 100px;
+    height: 100%;
+    z-index: 999;
+}
+
+.logo i {
+    font-size: 50px;
+    left: 100px;
+    top: 15px;
+    color: var(--extra);
+    opacity: 0;
+    animation: arrow 3s;
+    animation-delay: 2s;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+header .menu ul li {
+    margin: 0 15px;
+}
+
+header .menu ul li a {
+    color: var(--efeitos);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .2s ease-in-out;
+}
+
+header .menu ul li a:hover {
+    color: #fff;
+}
+
+@keyframes arrow {
+
+    0% {
+        opacity: 1;
+    }
+
+    11%, 66% {
+        left: 80px;
+        opacity: 1;
+    }
+
+    27.5%, 55% {
+        left: 100px;
+        opacity: 1;
+    }
+
+    80% {
+        left: 100px;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
