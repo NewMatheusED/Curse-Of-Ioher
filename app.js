@@ -15,15 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var scrollY = window.scrollY;
     var sparklesElement = document.querySelector(".sparkles");
     var mainImg = document.querySelector(".mainImg");
+    var particles = document.querySelector('#particles-js')
     
     if (scrollY > 1) {
       sparklesElement.style.opacity = '0';
       sparklesElement.style.pointerEvents = 'none';
-      mainImg.style.filter = 'brightness(40%)'
-    } else {
+      mainImg.style.filter = 'brightness(40%)';
+      particles.style.opacity = '1';
+      particles.style.pointerEvents = 'all';
+    } else if (scrollY < 1) {
       sparklesElement.style.opacity = '1';
       sparklesElement.style.pointerEvents = 'all';
-      mainImg.style.filter = 'brightness(60%)'
+      mainImg.style.filter = 'brightness(60%)';
+      particles.style.opacity = '0';
+      particles.style.pointerEvents = 'none';
     }
   }
 
@@ -77,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if(largura > 1000) {
 
+
     document.addEventListener("mousemove", function(event) {
           var posicaoTopoTela = event.clientY || event.pageY;
 
@@ -112,4 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
 
+  //---------------------------------------------------------------
+
+  particlesJS.load('particles-js', 'particlesjs-config.json', function() {});
 })
