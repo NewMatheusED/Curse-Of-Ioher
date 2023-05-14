@@ -43,6 +43,12 @@ html, body {
 }
 
 .mainImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 7.31vw;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -51,7 +57,37 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(60%);
+    transition: .2s ease-in-out;
     z-index: -9999;
+}
+
+.mainImg span {
+    text-shadow: 4px 4px 0 var(--efeitos);
+}
+
+.mainImg span:last-of-type {
+    font-size: 13.18vw;
+}
+
+.sparkles {
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    z-index: 99999999;
+    bottom: 0;
+}
+
+.sparkles .point {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #ebebeb67;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: sparkles 1s infinite ease-in-out;
 }
 
 .container {
@@ -164,7 +200,26 @@ header .menu ul li a:hover, header .menuMobile ul li a:hover {
     color: #fff;
 }
 
+section#home {
+    padding-top: 100vh;
+}
+
+section .box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
 @media screen and (max-width: 1000px) {
+
+    .mainImg {
+        font-size: 12.31vw;
+    }
+
+    .mainImg span:last-of-type {
+        font-size: 18.31vw;
+    }
+
     header {
         flex-direction: column;
         clip-path: polygon(0px 0px, 0px 0px, 100% 0px, 100% 0px);
@@ -191,6 +246,17 @@ header .menu ul li a:hover, header .menuMobile ul li a:hover {
 
     .logo i.fa-arrow-left-long {
         animation: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .mainImg {
+        font-size: 18.31vw;
+    }
+
+    .mainImg span:last-of-type {
+        font-size: 24.31vw;
     }
 }
 
@@ -228,5 +294,16 @@ header .menu ul li a:hover, header .menuMobile ul li a:hover {
 
     to {
         transform: rotate(360deg)
+    }
+}
+
+@keyframes sparkles {
+    from {
+      top: 100%;
+      opacity: 1;
+    }
+    to {
+      top: 0;
+      opacity: 0;
     }
 }
