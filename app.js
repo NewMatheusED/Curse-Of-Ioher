@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('.loader').style.display = 'none';
 
+  AOS.init();
+
   //---------------------------------------------------------------
 
   function setEfects() {
