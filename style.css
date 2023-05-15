@@ -84,8 +84,8 @@ html, body {
     bottom: 0;
     width: 5px;
     height: 5px;
-    background-color: #ebebeb67;
-    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.5);
+    background-color: #45c27b;
+    box-shadow: 0px 0px 20px 10px var(--efeitos);
     border-radius: 50%;
     animation: sparkles 1s infinite ease-in-out;
 }
