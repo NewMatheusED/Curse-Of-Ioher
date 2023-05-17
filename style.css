@@ -75,18 +75,20 @@ html, body {
 }
 
 .mainImg {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
-    text-align: center;
+    text-align: left;
     color: #000;
-    font-size: 7.31vw;
+    font-size: 6.31vw; */
+    display: flex;
+    justify-content: start;
     position: fixed;
     width: 100vw;
     height: 100vh;
     background: url(../banner.jpg);
-    background-position: center;
+    background-position: 50% 62%;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(60%);
@@ -94,18 +96,24 @@ html, body {
     z-index: -9999;
 }
 
-.mainImg div {
+.mainImg img {
+    max-height: 1500px;
+    height: 100%;
+    text-align: center;
+}
+
+/* .mainImg div {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
-}
+} */
 
-.mainImg span {
+/* .mainImg span {
     text-shadow: 4px 4px 0 var(--efeitos);
 }
 
 .mainImg span:nth-of-type(2) {
-    font-size: 30px;
+    font-size: 2.8vw;
     line-height: 0;
     margin-bottom: -30px;
     margin-left: -130px;
@@ -114,8 +122,8 @@ html, body {
 }
 
 .mainImg span:last-of-type {
-    font-size: 13.18vw;
-}
+    font-size: 12.18vw;
+} */
 
 .sparkles {
     width: 100vw;
