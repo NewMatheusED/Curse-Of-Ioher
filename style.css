@@ -78,6 +78,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     text-align: center;
     color: #000;
     font-size: 7.31vw;
@@ -93,14 +94,23 @@ html, body {
     z-index: -9999;
 }
 
+.mainImg div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
 .mainImg span {
     text-shadow: 4px 4px 0 var(--efeitos);
 }
 
 .mainImg span:nth-of-type(2) {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 0;
     margin-bottom: -30px;
+    margin-left: -130px;
+    text-shadow: none;
+    font-weight: normal;
 }
 
 .mainImg span:last-of-type {
