@@ -136,8 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
-  /*
-
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey('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');
   
@@ -157,7 +155,5 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Erro ao enviar o e-mail:', error);
     // Adicione aqui o código adicional para tratar o erro, se necessário
   });
-
-*/
 
 }) //Finalização do código
