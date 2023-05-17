@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
     setEfects();
   });
 
+  window.addEventListener('resize', function() {
+    setEfects();
+  })
+
   //---------------------------------------------------------------
 
   function randomizeSparkles() {
@@ -56,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   randomizeSparkles();
+
+  window.addEventListener('resize', function() {
+    randomizeSparkles();
+  })
 
   //-------------------------------------------------------------
 
@@ -121,4 +129,35 @@ document.addEventListener('DOMContentLoaded', function() {
   //---------------------------------------------------------------
 
   particlesJS.load('particles-js', 'particlesjs-config.json', function() {});
-})
+
+  //---------------------------------------------------------------
+
+  //div de acessibilidade *animação*
+
+  //---------------------------------------------------------------
+
+  /*
+
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey('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');
+  
+  const msg = {
+    to: 'matheus081105@gmail.com',
+    from: 'matheus081105@outlook.com',
+    subject: 'Mensagem do Ioher',
+    text: mensagem,
+  };
+
+  sgMail.send(msg)
+  .then(() => {
+    console.log('E-mail enviado com sucesso!');
+    // Adicione aqui o código adicional que você deseja executar
+  })
+  .catch((error) => {
+    console.error('Erro ao enviar o e-mail:', error);
+    // Adicione aqui o código adicional para tratar o erro, se necessário
+  });
+
+*/
+
+}) //Finalização do código
