@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function dinamicLogo() {
     var windowHeight = window.innerHeight; // Obtém a altura do viewport do navegador
+    console.log(windowHeight)
     var pixelValue = 500; // Valor em pixels que você deseja converter
     
     var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
@@ -188,6 +189,25 @@ document.addEventListener('DOMContentLoaded', function() {
     randomizeSparkles();
     dinamicLogo();
   })
+
+  //---------------------------------------------------------------
+
+  function aumentarFonte() {
+    var elementos = this.querySelectorAll('a h2 p')
+    elementos.forEach((elemento) => {
+      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
+      elemento.style.fontSize = (size + 2) + 'px';
+    })
+  }
+
+  function diminuirFonte() {
+    var elementos = this.querySelectorAll('a h2 p')
+    elementos.forEach((elemento) => {
+      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
+      elemento.style.fontSize = (size - 2) + 'px';
+    })
+  }
+
 
   //---------------------------------------------------------------
 
