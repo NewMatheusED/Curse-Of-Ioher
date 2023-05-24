@@ -138,10 +138,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //---------------------------------------------------------------
-  console.log('aaaa')
   function dinamicLogo() {
-    var windowHeight = window.innerHeight; // Obtém a altura do viewport do navegador
-    console.log(windowHeight)
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     var pixelValue = 500; // Valor em pixels que você deseja converter
     
     var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
