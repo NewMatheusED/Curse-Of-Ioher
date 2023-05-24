@@ -34,37 +34,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setEfects();
 
-
   document.addEventListener('scroll', function() {
     setEfects();
   });
 
-  window.addEventListener('resize', function() {
-    setEfects();
-  })
-
   //---------------------------------------------------------------
 
   function randomizeSparkles() {
-    var particulas = document.querySelectorAll('.point');
     var container = document.querySelector('.sparkles');
+    var larguraTela = container.clientWidth;
+    var distanciaHorizontal = 60;
+    var quantidadeParticulas = Math.floor(larguraTela / distanciaHorizontal);
   
-      for (var i = 0; i < particulas.length; i++) {
-        var particula = particulas[i];
-        
-        var posicaoX = Math.random() * container.clientWidth; // Coordenada X aleatória dentro do contêiner
-        var randomNumber = Math.random() * 1.5
-        
-        particula.style.left = posicaoX + 'px';
-        particula.style.animationDelay = randomNumber + 's'
+    // Verifica o número atual de partículas no DOM
+    var particlesAtuais = container.querySelectorAll('.point');
+    var quantidadeParticulasAtuais = particlesAtuais.length;
+  
+    // Remove partículas extras, se houver
+    if (quantidadeParticulasAtuais > quantidadeParticulas) {
+      for (var i = quantidadeParticulasAtuais - 1; i >= quantidadeParticulas; i--) {
+        container.removeChild(particlesAtuais[i]);
+      }
+      particlesAtuais = container.querySelectorAll('.point'); // Atualiza a lista de partículas
+      quantidadeParticulasAtuais = particlesAtuais.length; // Atualiza a quantidade atual
+    }
+  
+    // Adiciona as novas partículas, se necessário
+    for (var i = quantidadeParticulasAtuais; i < quantidadeParticulas; i++) {
+      var particula = document.createElement('div');
+      particula.className = 'point';
+  
+      var posicaoX = i * distanciaHorizontal;
+      var randomNumber = Math.random() * 1.5;
+  
+      particula.style.left = posicaoX + 'px';
+      particula.style.animationDelay = randomNumber + 's';
+  
+      container.appendChild(particula);
     }
   }
+  
   randomizeSparkles();
-
-  window.addEventListener('resize', function() {
-    randomizeSparkles();
-  })
-
+  
   //-------------------------------------------------------------
 
   document.querySelectorAll('ul li a').forEach(function(link) {
@@ -128,6 +139,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
+  function dinamicLogo() {
+    var windowHeight = window.innerHeight; // Obtém a altura do viewport do navegador
+    var pixelValue = 500; // Valor em pixels que você deseja converter
+    
+    var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
+  
+    document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
+  }
+
+  dinamicLogo()
+
+  //---------------------------------------------------------------
+
   particlesJS.load('particles-js', 'particlesjs-config.json', function() {});
 
   //---------------------------------------------------------------
@@ -135,7 +159,39 @@ document.addEventListener('DOMContentLoaded', function() {
   //div de acessibilidade *animação*
 
   //---------------------------------------------------------------
+  window.addEventListener('resize', () => {
+    setEfects();
+    randomizeSparkles();
+    dinamicLogo();
+  })
 
+  window.addEventListener('fullscreenchange', () => {
+    setEfects();
+    randomizeSparkles();
+    dinamicLogo();
+  })
+
+  window.addEventListener('webkitfullscreenchange', () => {
+    setEfects();
+    randomizeSparkles();
+    dinamicLogo();
+  })
+
+  window.addEventListener('mozfullscreenchange', () => {
+    setEfects();
+    randomizeSparkles();
+    dinamicLogo();
+  })
+
+  window.addEventListener('MSfullscreenchange', () => {
+    setEfects();
+    randomizeSparkles();
+    dinamicLogo();
+  })
+
+  //---------------------------------------------------------------
+
+  /*
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey('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');
   
@@ -155,5 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Erro ao enviar o e-mail:', error);
     // Adicione aqui o código adicional para tratar o erro, se necessário
   });
+  */
 
 }) //Finalização do código
