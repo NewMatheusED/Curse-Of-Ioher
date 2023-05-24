@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //---------------------------------------------------------------
-
+  console.log('aaaa')
   function dinamicLogo() {
     var windowHeight = window.innerHeight; // Obtém a altura do viewport do navegador
     console.log(windowHeight)
