@@ -138,16 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //---------------------------------------------------------------
-  function dinamicLogo() {
-    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    var pixelValue = 500; // Valor em pixels que você deseja converter
+  // function dinamicLogo() {
+  //   var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  //   var pixelValue = 500; // Valor em pixels que você deseja converter
     
-    var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
+  //   var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
   
-    document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
-  }
+  //   document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
+  // }
 
-  dinamicLogo()
+  // dinamicLogo()
 
   //---------------------------------------------------------------
 
@@ -167,25 +167,25 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('fullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    dinamicLogo();
+    // dinamicLogo();
   })
 
   window.addEventListener('webkitfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    dinamicLogo();
+    // dinamicLogo();
   })
 
   window.addEventListener('mozfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    dinamicLogo();
+    // dinamicLogo();
   })
 
   window.addEventListener('MSfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    dinamicLogo();
+    // dinamicLogo();
   })
 
   //---------------------------------------------------------------
