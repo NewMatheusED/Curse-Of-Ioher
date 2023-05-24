@@ -13,7 +13,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    overflow-x: clip;
 }
 
 html, body {
@@ -293,14 +292,6 @@ section .container .content p {
 }
 
 @media screen and (max-width: 1000px) {
-
-    .mainImg {
-        font-size: 12.31vw;
-    }
-
-    .mainImg span:last-of-type {
-        font-size: 18.31vw;
-    }
 
     header {
         flex-direction: column;
