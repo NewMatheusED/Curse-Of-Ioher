@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (scrollY < 1) {
       sparklesElement.style.opacity = '1';
       sparklesElement.style.pointerEvents = 'all';
-      mainImg.style.filter = 'brightness(60%)';
+      mainImg.style.filter = 'brightness(90%)';
       particles.style.opacity = '0';
       particles.style.pointerEvents = 'none';
     }
@@ -138,16 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //---------------------------------------------------------------
-  // function dinamicLogo() {
-  //   var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  //   var pixelValue = 500; // Valor em pixels que você deseja converter
+  function dinamicLogo() {
+    var windowHeight = window.innerWidth; // Obtém a altura do viewport do navegador
+    var pixelValue = 1250; // Valor em pixels que você deseja converter
     
-  //   var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
+    var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
   
-  //   document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
-  // }
+    document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
+  }
 
-  // dinamicLogo()
+  dinamicLogo()
 
   //---------------------------------------------------------------
 
@@ -167,25 +167,25 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('fullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    // dinamicLogo();
+    dinamicLogo();
   })
 
   window.addEventListener('webkitfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    // dinamicLogo();
+    dinamicLogo();
   })
 
   window.addEventListener('mozfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    // dinamicLogo();
+    dinamicLogo();
   })
 
   window.addEventListener('MSfullscreenchange', () => {
     setEfects();
     randomizeSparkles();
-    // dinamicLogo();
+    dinamicLogo();
   })
 
   //---------------------------------------------------------------
