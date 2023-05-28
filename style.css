@@ -64,8 +64,9 @@ html, body {
     display: flex;
 }
 
-.highContrast i, .increaseFont p, .decreaseFont p {
+.highContrast i, .increaseFont span, .decreaseFont span {
     position: relative;
+    display: inline-block;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

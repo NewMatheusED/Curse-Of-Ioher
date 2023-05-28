@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function(e) {
       e.preventDefault();
 
-      if(largura < 1000 ) {
+      if(largura < 1000) {
         header.style.clipPath = 'polygon(0px 0px, 0px 0px, 100% 0px, 100% 0px)'
         shadow.style.transitionDelay = '0s'
         shadow.style.opacity = 0
@@ -155,7 +155,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
-  //div de acessibilidade *animação*
+  function aumentarFonte() {
+    var elementos = document.querySelectorAll('a, h2, p')
+    elementos.forEach((elemento) => {
+      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
+      elemento.style.fontSize = (size + 2) + 'px';
+      console.log(size);
+    })
+  }
+
+  function diminuirFonte() {
+    var elementos = document.querySelectorAll('a, h2, p')
+    elementos.forEach((elemento) => {
+      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
+      elemento.style.fontSize = (size - 2) + 'px';
+    })
+  }
 
   //---------------------------------------------------------------
   window.addEventListener('resize', () => {
@@ -188,24 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
     dinamicLogo();
   })
 
-  //---------------------------------------------------------------
-
-  function aumentarFonte() {
-    var elementos = this.querySelectorAll('a h2 p')
-    elementos.forEach((elemento) => {
-      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
-      elemento.style.fontSize = (size + 2) + 'px';
-    })
-  }
-
-  function diminuirFonte() {
-    var elementos = this.querySelectorAll('a h2 p')
-    elementos.forEach((elemento) => {
-      var size = parseFloat(window.getComputedStyle(elemento).fontSize)
-      elemento.style.fontSize = (size - 2) + 'px';
-    })
-  }
-
+  document.querySelector('.increaseFont').addEventListener('click', aumentarFonte)
+  document.querySelector('.decreaseFont').addEventListener('click', diminuirFonte)
 
   //---------------------------------------------------------------
 
