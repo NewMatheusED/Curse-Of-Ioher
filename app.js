@@ -208,26 +208,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
-  /*
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey('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');
-  
-  const msg = {
-    to: 'matheus081105@gmail.com',
-    from: 'matheus081105@outlook.com',
-    subject: 'Mensagem do Ioher',
-    text: mensagem,
-  };
-
-  sgMail.send(msg)
-  .then(() => {
-    console.log('E-mail enviado com sucesso!');
-    // Adicione aqui o código adicional que você deseja executar
-  })
-  .catch((error) => {
-    console.error('Erro ao enviar o e-mail:', error);
-    // Adicione aqui o código adicional para tratar o erro, se necessário
-  });
-  */
-
 }) //Finalização do código
