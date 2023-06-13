@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
-  function randomizeSparkles() {
+  function randomizeSparkles() { //tá meio bugado ainda
     var container = document.querySelector('.sparkles');
     var larguraTela = container.clientWidth;
     var distanciaHorizontal = 60;
