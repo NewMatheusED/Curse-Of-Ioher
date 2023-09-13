@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --efeitos: #ac7a0f;
+    --efeitos: #69ff1c;
     --base: #5f0ae5;
     --extra: #f2d9ff;
-    --roxo: #370666;
+    --roxo: #5c2076;
 }
 
 * {
@@ -85,18 +85,14 @@ html, body {
     color: #000;
     font-size: 6.31vw; */
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: url(../banner.jpg);
-    background-position: 50% 62%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(80%);
     transition: .2s ease-in-out;
     z-index: -9999;
+    background: radial-gradient(#536992, #46496c);
 }
 
 .mainImg img {
@@ -141,7 +137,7 @@ html, body {
     bottom: 0;
     width: 5px;
     height: 5px;
-    background-color: #d8991296;
+    background-color: #68ff1c69;
     box-shadow: 0px 0px 20px 10px var(--efeitos);
     border-radius: 50%;
     animation: sparkles 1s infinite ease-in-out;
@@ -159,7 +155,7 @@ html, body {
 #shadow {
     position: fixed;
     box-shadow: 5px 15px 10px 0px rgba(0,0,0,0.75);
-    height: 94px;
+    height: 100px;
     width: 100vw;
     opacity: 0;
     transition: .2s ease-in-out;
@@ -172,7 +168,7 @@ header {
     justify-content: space-between;
     background: var(--roxo);
     width: 100vw;
-    padding: 40px;
+    padding: 25px 45px; 
     transition: .5s ease-in-out;
     clip-path: polygon(0px 0px, 0px 0px, 0px 100%, 0px 100%);
     box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
@@ -181,7 +177,7 @@ header {
 
 .logo img, .logo i {
     position: fixed;
-    padding: 10px;
+    margin: 10px;
     max-height: 100px;
     height: 100%;
     z-index: 999;
@@ -240,8 +236,25 @@ header .menuMobile ul {
 }
 
 header .menu ul li {
-    margin: 0 15px;
+    margin: 15px 15px 0 15px;
 }
+
+.menu ul li a::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 200ms ease;
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+}   
 
 header .menuMobile ul li {
     margin: 5px 0;
