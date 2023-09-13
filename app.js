@@ -3,13 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById("header")
   const shadow = document.getElementById("shadow")
 
+  //coisas a se fazer:
+  // - Mudar layout
+  // - Mudar cores
+  // - Padrão de cores
+  // - Aprimorar efeitos visuais
+  // - Melhor trabalhar a responsividade no geral, principalmente em telas maiores
+
   //---------------------------------------------------------------
 
   document.querySelector('.loader').style.display = 'none';
 
   AOS.init();
 
-  console.log(`
+  console.log(` //por favor, entenda que isso é brincadeira interna, é sério
   _      ______ ____         ____  ______      _____ ____  _    _ ______ _____  
   | |    |  ____/ __ \       / __ \|  ____|    |_   _/ __ \| |  | |  ____|  __ \ 
   | |    | |__ | |  | |     | |  | | |__         | || |  | | |__| | |__  | |__) |
