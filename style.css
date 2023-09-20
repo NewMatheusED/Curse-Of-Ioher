@@ -169,7 +169,7 @@ header {
     background: var(--roxo);
     width: 100vw;
     padding: 25px 45px; 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     clip-path: polygon(0px 0px, 0px 0px, 0px 100%, 0px 100%);
     box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
     z-index: 99;
@@ -285,24 +285,46 @@ section#home {
     transition: .3s ease-in-out;
 }
 
-section .container .content {
-    background-color: rgba(0, 0, 0, 0.3);
+body.andre section .container .content {
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
+    transition: .2s ease-in-out;
 }
 
-section .container .content h2 {
-    color: var(--efeitos);
+body.andre section .container .content h2 {
+    color: #fff;
     font-size: 25px;
     background: var(--roxo);
     padding: 10px 0;
+    transition: .2s ease-in-out;
 }
 
-section .container .content p {
-    color: var(--extra);
+body.andre section .container .content p {
+    color: #1d1d1d;
     font-size: 15px;
     font-weight: normal;
-    background: var(--efeitos);
+    background: #ffffffb6;
     padding: 5px 10px;
+    transition: .2s ease-in-out;
+}
+
+body.alex section .container .content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    transition: .2s ease-in-out;
+}
+
+body.alex section .container .content p {
+    color: #e6e6e6;
+    font-size: 15px;
+    font-weight: normal;
+    background: #000000b6;
+    padding: 5px 10px;
+    transition: .2s ease-in-out;
+}
+
+.container {
+    max-width: 80vw;
 }
 
 @media screen and (max-width: 1000px) {
@@ -346,13 +368,6 @@ section .container .content p {
         background-size: cover;
     }
 }
-
-@media screen and (min-width: 1080px) {
-    .container {
-        max-width: 70vw;
-    }
-}
-
 
 @keyframes arrow {
 

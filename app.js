@@ -190,6 +190,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //---------------------------------------------------------------
+
+  let darkModeBtn = document.querySelector('.highContrast')
+
+  darkModeBtn.addEventListener('click', function() {
+    if(document.body.classList.contains('andre')) {
+      document.body.classList.toggle('alex')
+    }else{
+      document.body.classList.toggle('andre')
+    }
+  })
+
+  //---------------------------------------------------------------
+
   window.addEventListener('resize', () => {
     setEfects();
     randomizeSparkles();
