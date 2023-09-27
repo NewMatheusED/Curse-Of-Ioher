@@ -96,7 +96,7 @@ html, body {
 }
 
 .mainImg img {
-    max-width: 100%;
+    width: 75%;
 }
 
 /* .mainImg div {
@@ -356,16 +356,9 @@ body.alex section .container .content p {
     .logo i.fa-arrow-left-long {
         animation: none;
     }
-}
 
-@media screen and (max-width: 768px) {
-
-    .mainImg {
-        justify-content: center;
-        background: url(../bannerMobile.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .mainImg img {
+        width: 100%;
     }
 }
 
