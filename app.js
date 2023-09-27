@@ -57,41 +57,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
 
-  function randomizeSparkles() { //tá meio bugado ainda
-    var container = document.querySelector('.sparkles');
-    var larguraTela = container.clientWidth;
-    var distanciaHorizontal = 60;
-    var quantidadeParticulas = Math.floor(larguraTela / distanciaHorizontal);
+  // function randomizeSparkles() { //tá meio bugado ainda
+  //   var container = document.querySelector('.sparkles');
+  //   var larguraTela = container.clientWidth;
+  //   var distanciaHorizontal = 60;
+  //   var quantidadeParticulas = Math.floor(larguraTela / distanciaHorizontal);
   
-    // Verifica o número atual de partículas no DOM
-    var particlesAtuais = container.querySelectorAll('.point');
-    var quantidadeParticulasAtuais = particlesAtuais.length;
+  //   // Verifica o número atual de partículas no DOM
+  //   var particlesAtuais = container.querySelectorAll('.point');
+  //   var quantidadeParticulasAtuais = particlesAtuais.length;
   
-    // Remove partículas extras, se houver
-    if (quantidadeParticulasAtuais > quantidadeParticulas) {
-      for (var i = quantidadeParticulasAtuais - 1; i >= quantidadeParticulas; i--) {
-        container.removeChild(particlesAtuais[i]);
-      }
-      particlesAtuais = container.querySelectorAll('.point'); // Atualiza a lista de partículas
-      quantidadeParticulasAtuais = particlesAtuais.length; // Atualiza a quantidade atual
-    }
+  //   // Remove partículas extras, se houver
+  //   if (quantidadeParticulasAtuais > quantidadeParticulas) {
+  //     for (var i = quantidadeParticulasAtuais - 1; i >= quantidadeParticulas; i--) {
+  //       container.removeChild(particlesAtuais[i]);
+  //     }
+  //     particlesAtuais = container.querySelectorAll('.point'); // Atualiza a lista de partículas
+  //     quantidadeParticulasAtuais = particlesAtuais.length; // Atualiza a quantidade atual
+  //   }
   
-    // Adiciona as novas partículas, se necessário
-    for (var i = quantidadeParticulasAtuais; i < quantidadeParticulas; i++) {
-      var particula = document.createElement('div');
-      particula.className = 'point';
+  //   // Adiciona as novas partículas, se necessário
+  //   for (var i = quantidadeParticulasAtuais; i < quantidadeParticulas; i++) {
+  //     var particula = document.createElement('div');
+  //     particula.className = 'point';
   
-      var posicaoX = i * distanciaHorizontal;
-      var randomNumber = Math.random() * 1.5;
+  //     var posicaoX = i * distanciaHorizontal;
+  //     var randomNumber = Math.random() * 1.5;
   
-      particula.style.left = posicaoX + 'px';
-      particula.style.animationDelay = randomNumber + 's';
+  //     particula.style.left = posicaoX + 'px';
+  //     particula.style.animationDelay = randomNumber + 's';
   
-      container.appendChild(particula);
-    }
-  }
+  //     container.appendChild(particula);
+  //   }
+  // }
   
-  randomizeSparkles();
+  // randomizeSparkles();
   
   //-------------------------------------------------------------
 
@@ -205,31 +205,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('resize', () => {
     setEfects();
-    randomizeSparkles();
+    //randomizeSparkles();
     dinamicLogo();
   })
 
   window.addEventListener('fullscreenchange', () => {
     setEfects();
-    randomizeSparkles();
+    //randomizeSparkles();
     dinamicLogo();
   })
 
   window.addEventListener('webkitfullscreenchange', () => {
     setEfects();
-    randomizeSparkles();
+    //randomizeSparkles();
     dinamicLogo();
   })
 
   window.addEventListener('mozfullscreenchange', () => {
     setEfects();
-    randomizeSparkles();
+    //randomizeSparkles();
     dinamicLogo();
   })
 
   window.addEventListener('MSfullscreenchange', () => {
     setEfects();
-    randomizeSparkles();
+    //randomizeSparkles();
     dinamicLogo();
   })
 
