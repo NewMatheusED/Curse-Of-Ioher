@@ -97,6 +97,7 @@ html, body {
 
 .mainImg img {
     width: 75%;
+    max-width: 100vw;
 }
 
 /* .mainImg div {
