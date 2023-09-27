@@ -156,15 +156,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //---------------------------------------------------------------
   function dinamicLogo() {
-    var windowHeight = window.innerWidth; // Obtém a altura do viewport do navegador
-    var pixelValue = 1250; // Valor em pixels que você deseja converter
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    var pixelValue = 1250;
     
-    var vhValue = (pixelValue / windowHeight) * 100; // Calcula o valor em vh
+    var vhValue = (pixelValue / windowHeight) * 100;
+    var vwValue = (pixelValue / windowWidth) * 100;
   
     document.querySelector('.mainImg img').style.maxHeight = vhValue + 'vh';
+    document.querySelector('.mainImg img').style.maxWidth = vwValue + 'vw';
   }
 
-  dinamicLogo()
+  dinamicLogo();
 
   //---------------------------------------------------------------
 
