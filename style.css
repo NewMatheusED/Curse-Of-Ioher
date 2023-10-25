@@ -305,8 +305,9 @@ body.andre section .container .content p {
     font-size: 15px;
     font-weight: normal;
     background: #ffffffb6;
-    padding: 5px 10px;
+    padding: 15px;
     transition: .2s ease-in-out;
+    text-align: left;
 }
 
 body.alex section .container .content {
