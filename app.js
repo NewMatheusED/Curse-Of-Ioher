@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.logo i.mobileIcon')
 
     button.addEventListener('click', function () {
-      shadow.style.height = '375px'
+      shadow.style.height = '350px'
       if(header.classList.contains('hide')) {
         header.classList.remove('hide')
         header.classList.add('show')
