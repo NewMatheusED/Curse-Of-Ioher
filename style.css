@@ -307,7 +307,8 @@ body.andre section .container .content p {
     background: #ffffffb6;
     padding: 15px;
     transition: .2s ease-in-out;
-    text-align: left;
+    text-align: justify;
+    
 }
 
 body.alex section .container .content {
