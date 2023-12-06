@@ -300,15 +300,18 @@ body.andre section .container .content h2 {
     transition: .2s ease-in-out;
 }
 
-body.andre section .container .content p {
+body.andre section .container .content p, body.andre section .container .content video {
     color: #1d1d1d;
     font-size: 15px;
     font-weight: normal;
     background: #ffffffb6;
     padding: 15px;
     transition: .2s ease-in-out;
-    text-align: justify;
-    
+    text-align: justify; 
+}
+
+video {
+    width: 100%
 }
 
 body.alex section .container .content {
@@ -317,7 +320,7 @@ body.alex section .container .content {
     transition: .2s ease-in-out;
 }
 
-body.alex section .container .content p {
+body.alex section .container .content p, body.alex section .container .content video {
     color: #e6e6e6;
     font-size: 15px;
     font-weight: normal;
