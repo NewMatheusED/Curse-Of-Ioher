@@ -332,7 +332,7 @@ img.screenshots {
  }
 
  .w100 {
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
  }
 
 body.alex section .container .content {
@@ -393,6 +393,10 @@ body.alex section .container .content p, body.alex section .container .content v
     }
 
     .w50 {
+        width: 100%;
+    }
+
+    .w100 {
         width: 100%;
     }
 
