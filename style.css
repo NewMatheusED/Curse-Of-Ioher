@@ -328,11 +328,11 @@ img.screenshots {
     margin: 10px;
 }
  .w50 {
-    width: 50%;
+    width: calc(50% - 20px);
  }
 
  .w100 {
-    width: 100%;
+    width: calc(100% - 10px);
  }
 
 body.alex section .container .content {
