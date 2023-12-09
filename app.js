@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   AOS.init();
 
-  console.log(` //por favor, entenda que isso é brincadeira interna, é sério
+  console.log(`
   _      ______ ____         ____  ______      _____ ____  _    _ ______ _____  
   | |    |  ____/ __ \       / __ \|  ____|    |_   _/ __ \| |  | |  ____|  __ \ 
   | |    | |__ | |  | |     | |  | | |__         | || |  | | |__| | |__  | |__) |
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //---------------------------------------------------------------
 
   function aumentarFonte() {
-    var elementos = document.querySelectorAll('a, h2, p')
+    var elementos = document.querySelectorAll('a, h2, p, span')
     elementos.forEach((elemento) => {
       var size = parseFloat(window.getComputedStyle(elemento).fontSize)
       elemento.style.fontSize = (size + 2) + 'px';
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function diminuirFonte() {
-    var elementos = document.querySelectorAll('a, h2, p')
+    var elementos = document.querySelectorAll('a, h2, p, span')
     elementos.forEach((elemento) => {
       var size = parseFloat(window.getComputedStyle(elemento).fontSize)
       elemento.style.fontSize = (size - 2) + 'px';
