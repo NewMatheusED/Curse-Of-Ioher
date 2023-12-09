@@ -327,13 +327,22 @@ video {
 img.screenshots {
     margin: 10px;
 }
- .w50 {
+.w50 {
     width: calc(50% - 20px);
- }
+}
 
- .w100 {
+.w100 {
     width: calc(100% - 20px);
- }
+}
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
 
 body.alex section .container .content {
     background-color: rgba(0, 0, 0, 0.3);
